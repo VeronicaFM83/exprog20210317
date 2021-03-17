@@ -10,10 +10,10 @@ public final class Coche extends VehiculoPersonas {
 	
 	
 	@Override
-	protected double getPrecioAlquiler(int dias) {
-		double precio = super.getPrecioAlquiler(dias);
+	public void getPrecioAlquiler(int dias) {
+		double precio = dias * 50;
 		precio += this.suplemento * this.plazas;
-		return precio;
+		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
 	}
 	
 	@Override
@@ -26,7 +26,7 @@ public final class Coche extends VehiculoPersonas {
 		// TODO Auto-generated method stub
 		Coche nuevo = new Coche("1245abc", "Ford", "Focus", 4);
 		System.out.println(nuevo);
-		System.out.println(nuevo.getPrecioAlquiler(2));
+		nuevo.getPrecioAlquiler(2);
 	}
 
 }

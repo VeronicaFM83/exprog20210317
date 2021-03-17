@@ -1,6 +1,6 @@
 package fp.daw.examen2ev;
 
-public class VehiculoPersonas extends Vehiculo {
+public class VehiculoPersonas extends Vehiculo implements PrecioAlquiler {
 	
 	protected int plazas;
 	

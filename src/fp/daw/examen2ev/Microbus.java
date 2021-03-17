@@ -10,10 +10,11 @@ public final class Microbus extends VehiculoPersonas {
 	
 	
 	@Override
-	protected double getPrecioAlquiler(int dias) {
-		double precio = super.getPrecioAlquiler(dias);
+	public void getPrecioAlquiler(int dias) {
+		double precio = dias * 50;
 		precio += this.suplemento * this.plazas * dias;
-		return precio;
+		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
+
 	}
 	
 	@Override
@@ -24,9 +25,9 @@ public final class Microbus extends VehiculoPersonas {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Microbus nuevo = new Microbus("1245abc", "Ford", "Focus", 10);
+		Microbus nuevo = new Microbus("9854gjh", "Renault", "ABCD", 10);
 		System.out.println(nuevo);
-		System.out.println(nuevo.getPrecioAlquiler(1));
+		nuevo.getPrecioAlquiler(1);
 	}
 
 }

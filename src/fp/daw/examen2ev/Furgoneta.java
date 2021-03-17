@@ -16,7 +16,7 @@ public final class Furgoneta extends VehiculoMercancia{
 		// TODO Auto-generated method stub
 		Furgoneta nuevo = new Furgoneta("1245abc", "Ford", "Focus", 1.3);
 		System.out.println(nuevo);
-		System.out.println(nuevo.getPrecioAlquiler(2));
+		nuevo.getPrecioAlquiler(2);
 	}
 
 }

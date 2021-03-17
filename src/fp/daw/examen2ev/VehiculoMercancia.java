@@ -1,6 +1,6 @@
 package fp.daw.examen2ev;
 
-public abstract class VehiculoMercancia extends Vehiculo {
+public abstract class VehiculoMercancia extends Vehiculo implements PrecioAlquiler {
 	
 	protected double pma;
 
@@ -17,10 +17,10 @@ public abstract class VehiculoMercancia extends Vehiculo {
 	}
 	
 	@Override
-	protected double getPrecioAlquiler(int dias) {
-		double precio = super.getPrecioAlquiler(dias);
+	public void getPrecioAlquiler(int dias) {
+		double precio = dias * 50;
 		precio += this.suplemento * this.pma;
-		return precio;
+		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
 	}
 
 }

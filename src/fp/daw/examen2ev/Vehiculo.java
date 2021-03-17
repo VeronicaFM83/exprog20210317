@@ -1,6 +1,6 @@
 package fp.daw.examen2ev;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements PrecioAlquiler {
 	 
 	protected String matricula, marca, modelo;
 	protected double suplemento;
@@ -52,21 +52,18 @@ public abstract class Vehiculo {
 		this.tipo_transporte = tipo_transporte;
 	}
 
-	
-	protected double getPrecioAlquiler(int dias) {
+	@Override
+	public void getPrecioAlquiler(int dias) {
 		double precio = dias * 50;
-		return precio;
+		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
 	}
+
 	
 	@Override
 	public String toString() {
 		return "Matrícula: " + matricula + ", Marca: " + marca + ", Modelo: " + modelo
 				+ ", Tipo de transporte: " + tipo_transporte;
 	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
 
 }
