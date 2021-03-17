@@ -2,21 +2,56 @@ package fp.daw.examen2ev;
 
 public abstract class Vehiculo {
 	 
-	protected enum tipoTransporte { PERSONAS,MERCANCIA } // PTE REVISAR
-	 
 	protected String matricula, marca, modelo;
-	protected int plazas;
-	protected String tipoTransporte;
 	protected double suplemento;
+	protected String tipo_transporte;
 	
-	public Vehiculo(String matricula, String marca, String modelo, int plazas) { // PTE REVISAR
+	public Vehiculo(String matricula, String marca, String modelo) {
 		this.matricula = matricula;
 		this.marca = marca;
 		this.modelo = modelo;
-		this.plazas = plazas;
-		//this.tipoTransporte = Vehiculo.tipoTransporte;
 	}
 	
+	protected String getMatricula() {
+		return matricula;
+	}
+
+	protected void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	protected String getMarca() {
+		return marca;
+	}
+
+	protected void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	protected String getModelo() {
+		return modelo;
+	}
+
+	protected void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	protected double getSuplemento() {
+		return suplemento;
+	}
+
+	protected void setSuplemento(double suplemento) {
+		this.suplemento = suplemento;
+	}
+
+	protected String getTipo_transporte() {
+		return tipo_transporte;
+	}
+
+	protected void setTipo_transporte(String tipo_transporte) {
+		this.tipo_transporte = tipo_transporte;
+	}
+
 	
 	protected double getPrecioAlquiler(int dias) {
 		double precio = dias * 50;
@@ -25,8 +60,8 @@ public abstract class Vehiculo {
 	
 	@Override
 	public String toString() {
-		return "Datos del VEHÍCULO:\n" + "Matrícula: " + matricula + ", Marca: " + marca + ", Modelo: " + modelo
-				+ " Nº de plazas: " + plazas;
+		return "Matrícula: " + matricula + ", Marca: " + marca + ", Modelo: " + modelo
+				+ ", Tipo de transporte: " + tipo_transporte;
 	}
 	
 	public static void main(String[] args) {
