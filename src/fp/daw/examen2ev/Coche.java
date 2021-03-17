@@ -22,11 +22,4 @@ public final class Coche extends VehiculoPersonas {
 
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Coche nuevo = new Coche("1245abc", "Ford", "Focus", 4);
-		System.out.println(nuevo);
-		nuevo.getPrecioAlquiler(2);
-	}
-
 }

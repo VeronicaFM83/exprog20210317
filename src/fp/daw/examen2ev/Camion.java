@@ -21,11 +21,4 @@ public final class Camion extends VehiculoMercancia{
 		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Camion nuevo = new Camion("9854gjh", "Renault", "Abcde", 5.2);
-		System.out.println(nuevo);
-		nuevo.getPrecioAlquiler(1);
-	}
-
 }

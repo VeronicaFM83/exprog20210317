@@ -22,12 +22,5 @@ public final class Microbus extends VehiculoPersonas {
 		return "Datos del MICROBUS:\n" + super.toString();
 
 	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Microbus nuevo = new Microbus("9854gjh", "Renault", "ABCD", 10);
-		System.out.println(nuevo);
-		nuevo.getPrecioAlquiler(1);
-	}
 
 }

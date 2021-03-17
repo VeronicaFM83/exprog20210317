@@ -9,7 +9,6 @@ public class Ejercicio2 {
 		// TODO Auto-generated method stub
 		
 		ArrayList<Vehiculo> listaVehiculos = new ArrayList<>();
-		
 		listaVehiculos.add(new Coche("1245abc", "Ford", "Focus", 4));
 		listaVehiculos.add(new Microbus("9854gjh", "Renault", "Abcde", 10));
 		listaVehiculos.add(new Furgoneta("2562ert", "Seat", "Egwegh", 2.5));
@@ -26,7 +25,7 @@ public class Ejercicio2 {
 		} catch (Exception e) {
 			System.err.println("Error al introducir numero");
 		}
-		
+		input.close();
 	}
 
 }

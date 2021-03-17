@@ -57,13 +57,10 @@ public abstract class Vehiculo implements PrecioAlquiler {
 		double precio = dias * 50;
 		System.out.println("Importe alquiler para " + dias + " días: " + precio + " euros.");
 	}
-
 	
 	@Override
 	public String toString() {
 		return "Matrícula: " + matricula + ", Marca: " + marca + ", Modelo: " + modelo
 				+ ", Tipo de transporte: " + tipo_transporte;
 	}
-
-
 }
